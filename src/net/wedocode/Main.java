@@ -109,7 +109,7 @@ public class Main {
         org.Accept(payrise);
         org.Accept(payroll);
 
-        System.out.println(String.format("Total pay increase = %s.", payrise.TotalIncrease));
+        System.out.printf("Total pay increase = %s.%n", payrise.TotalIncrease);
         System.out.println();
     }
 
@@ -159,7 +159,7 @@ public class Main {
         EventMonitor logger = new EventLogger(receiver);
         receiver.Attach(logger);
         receiver.logMessage("Message with two observers.");
-        System.out.println("");
+        System.out.println();
     }
 
     private static void delayProcessing(){
@@ -190,7 +190,7 @@ public class Main {
         // Undo
         book.restoreFromUndo(history.Memento);
         System.out.println("Book restored: " + book.toString());
-        System.out.println("");
+        System.out.println();
     }
 
     private static void runMediator() {
@@ -206,7 +206,7 @@ public class Main {
         sam.Name = "Sam";
         Attendee jim = new Attendee(mediator);
         jim.Name = "Jim";
-        mediator.Attendees = new ArrayList<Attendee>(Arrays.asList(sam, jim));
+        mediator.Attendees = new ArrayList<>(Arrays.asList(sam, jim));
 
         presenter.sendNewImageUrl("Slide1.jpg");
         sam.askQuestion("How often should I do this?");
@@ -252,7 +252,7 @@ public class Main {
         for (String command : commands)
         {
             ExpressionBase expression = parser.parse(command);
-            System.out.println(String.format("%s = %s", expression, expression.evaluate()));
+            System.out.printf("%s = %s%n", expression, expression.evaluate());
         }
     }
 
@@ -303,14 +303,14 @@ public class Main {
         h5.handleCoin(fiftyCents);
         h5.handleCoin(counterfeitOneRand);
 
-        System.out.println("");
+        System.out.println();
     }
 
     private static void runSingleton() {
         System.out.println(">>> Singleton <<<");
         MySingleton singleton = MySingleton.getMyInstance();
         System.out.println(singleton.getDescription());
-        System.out.println("");
+        System.out.println();
     }
 
     private static void runPrototype() throws CloneNotSupportedException {
@@ -329,7 +329,7 @@ public class Main {
         tester.language = "Powershell";
         System.out.println(tester.toString());
         Tester testerCopy = (Tester) tester.CloneEmployee();
-        System.out.println(tester.toString());
+        System.out.println(testerCopy.toString());
         System.out.println();
     }
 
@@ -348,7 +348,7 @@ public class Main {
         Bike hondaCruiser = hondaFactory.CreateBike("cruiser");
         System.out.println("Expected target type honda Cruiser: " +  hondaCruiser.getClass());
 
-        System.out.println("");
+        System.out.println();
 
     }
 
