@@ -19,4 +19,4 @@ Players:
 1. An existing class call PizzaOven that has a cook method on it accepting a Cookable abstraction.
 2. An existing class called Hamburger, it knows what to do when cooked but does not have the Cookable abastraciton.
 3. An existing abstract class called Cookable
-4. A new class call PizzaAdapter to adapt our Pizza to go into the Pizza oven cook method.
+4. A new class call PizzaAdapter to adapt our Hamburger to go into the Pizza oven cook method.
