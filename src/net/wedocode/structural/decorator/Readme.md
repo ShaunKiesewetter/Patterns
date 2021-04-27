@@ -1,4 +1,4 @@
-# Decorator Patten
+# Decorator Pattern
 
 ## GOF Definition
 
